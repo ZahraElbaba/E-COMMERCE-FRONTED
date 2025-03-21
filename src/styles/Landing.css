@@ -1,0 +1,47 @@
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 50px;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+  }
+  
+  .text-content {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .landing {
+      flex-direction: column;
+      text-align: center;
+    }
+    .text-content, .image-content {
+      width: 100%;
+    }
+  }
+  
