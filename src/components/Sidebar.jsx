@@ -1,32 +1,32 @@
+// src/components/Sidebar.jsx
 import React from "react";
-import { FiHome, FiUsers, FiBox, FiShoppingCart, FiSettings } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
+import { FiHome, FiUsers, FiShoppingCart, FiBox } from "react-icons/fi";
 
 const navLinks = [
   { name: "Home", icon: <FiHome />, path: "/" },
   { name: "Users", icon: <FiUsers />, path: "/users" },
-  { name: "Products", icon: <FiBox />, path: "/products" },
   { name: "Orders", icon: <FiShoppingCart />, path: "/orders" },
-  { name: "Settings", icon: <FiSettings />, path: "/settings" },
+  { name: "Products", icon: <FiBox />, path: "/products" },
+  // { name: "Shipping", icon: <FiTruck />, path: "/shipping" },
+  // { name: "Categories", icon: <FiLayers />, path: "/categories" },
+  // { name: "Wishlist", icon: <FiHeart />, path: "/wishlist" },
 ];
 
 const Sidebar = () => {
   return (
     <div className="bg-gray-800 text-white w-64 p-4 flex flex-col">
-      {/* Logo or Title */}
       <div className="text-xl font-bold mb-8">Dashboard</div>
-
-      {/* Navigation Links */}
       <nav className="flex flex-col gap-4">
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.name}
-            href={link.path}
+            to={link.path}
             className="flex items-center gap-2 px-2 py-2 rounded-md hover:bg-gray-700"
           >
             {link.icon}
             <span>{link.name}</span>
-          </a>
+          </Link>
         ))}
       </nav>
     </div>
