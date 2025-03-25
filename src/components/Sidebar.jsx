@@ -1,15 +1,15 @@
 // src/components/Sidebar.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiHome, FiUsers, FiShoppingCart, FiBox } from "react-icons/fi";
+import { FiHome, FiUsers, FiShoppingCart, FiBox ,FiTag,FiTruck} from "react-icons/fi";
 
 const navLinks = [
   { name: "Home", icon: <FiHome />, path: "/" },
   { name: "Users", icon: <FiUsers />, path: "/users" },
   { name: "Orders", icon: <FiShoppingCart />, path: "/orders" },
   { name: "Products", icon: <FiBox />, path: "/products" },
-  // { name: "Shipping", icon: <FiTruck />, path: "/shipping" },
-  // { name: "Categories", icon: <FiLayers />, path: "/categories" },
+  { name: "Shipping", icon: <FiTruck />, path: "/shipping" },
+  { name: "Categories", icon: <FiTag />, path: "/categories" },
   // { name: "Wishlist", icon: <FiHeart />, path: "/wishlist" },
 ];
 

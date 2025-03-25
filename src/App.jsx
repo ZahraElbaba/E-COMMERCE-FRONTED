@@ -5,7 +5,9 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard"; // Home or default page
 import Users from "./pages/Users";
 import Orders from "./pages/Orders";
-// import Products from "./pages/Products"; // if you have it, etc.
+import Products from "./pages/Products";
+import Categories from "./pages/Categories";
+import Shipping from "./pages/Shipping";
 
 const App = () => {
   return (
@@ -20,6 +22,9 @@ const App = () => {
             <Route path="/" element={<Orders />} />
             <Route path="/users" element={<Users />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/shipping" element={<Shipping />} />
             {/* <Route path="/products" element={<Products />} /> */}
           </Routes>
         </div>
