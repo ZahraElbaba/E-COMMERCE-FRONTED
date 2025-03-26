@@ -138,7 +138,7 @@ const Categories = () => {
         <h2 className="text-2xl font-bold">Categories</h2>
         <button
           onClick={handleShowAddModal}
-          className="px-4 py-2 bg-green-500 text-white rounded"
+          className="px-4 py-2 bg-green-800 text-white rounded"
         >
           ADD Category
         </button>
@@ -203,7 +203,7 @@ const Categories = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Add
                 </button>
               </div>
@@ -240,7 +240,7 @@ const Categories = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Save
                 </button>
               </div>

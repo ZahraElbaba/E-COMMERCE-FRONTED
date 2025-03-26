@@ -160,7 +160,7 @@ const ShippingAddressDetails = ({ addressId, addressMap, refreshAddress }) => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Save
                 </button>
               </div>
@@ -376,7 +376,7 @@ export default function Shipping() {
     <div className="p-4">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-bold">Shipping</h2>
-        <button onClick={handleShowAddModal} className="px-4 py-2 bg-green-500 text-white rounded">
+        <button onClick={handleShowAddModal} className="px-4 py-2 bg-green-800 text-white rounded">
           ADD Shipping
         </button>
       </div>
@@ -496,7 +496,7 @@ export default function Shipping() {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Add
                 </button>
               </div>
@@ -543,7 +543,7 @@ export default function Shipping() {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Save
                 </button>
               </div>

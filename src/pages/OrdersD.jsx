@@ -286,7 +286,7 @@ const Orders = () => {
         <h2 className="text-2xl font-bold">Orders</h2>
         <button
           onClick={handleShowAddOrderModal}
-          className="px-4 py-2 bg-green-500 text-white rounded"
+          className="px-4 py-2 bg-green-800 text-white rounded"
         >
           ADD Order
         </button>
@@ -351,7 +351,7 @@ const Orders = () => {
                         Items for Order #{order.id}
                       </h3>
                       <button
-                        className="mb-2 px-2 py-1 bg-green-500 text-white rounded"
+                        className="mb-2 px-2 py-1 bg-green-800 text-white rounded"
                         onClick={() => handleShowAddItemModal(order.id)}
                       >
                         Add Item
@@ -466,7 +466,7 @@ const Orders = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Add
                 </button>
               </div>
@@ -540,7 +540,7 @@ const Orders = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   Save
                 </button>
               </div>
@@ -624,7 +624,7 @@ const Orders = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
+                <button type="submit" className="px-4 py-2 bg-green-800 text-white rounded">
                   {editingItem ? "Update" : "Add"}
                 </button>
               </div>

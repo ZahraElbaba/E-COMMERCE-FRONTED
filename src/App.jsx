@@ -2,12 +2,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard"; // Home or default page
-import Users from "./pages/Users";
-import Orders from "./pages/Orders";
-import Products from "./pages/Products";
-import Categories from "./pages/Categories";
-import Shipping from "./pages/Shipping";
+import Dashboard from "./pages/DashboardD"; // Home or default page
+import Users from "./pages/UsersD";
+import Orders from "./pages/OrdersD";
+import Products from "./pages/ProductsD";
+import Categories from "./pages/CategoriesD";
+import Shipping from "./pages/ShippingD";
+import Wishlist from "./pages/WishlistD";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/shipping" element={<Shipping />} />
+            <Route path="/wishlist" element={<Wishlist />} />
             {/* <Route path="/products" element={<Products />} /> */}
           </Routes>
         </div>
