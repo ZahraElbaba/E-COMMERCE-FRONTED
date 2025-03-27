@@ -1,0 +1,9 @@
+/* src/styles/dashboard.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can also add any custom classes or overrides here. Example: */
+.table-header {
+  @apply text-gray-500 font-semibold;
+}
