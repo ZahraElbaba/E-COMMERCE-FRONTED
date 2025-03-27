@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Category = () => {
+const Categories = () => {
   const { type } = useParams();
 
   // Define images based on category type
@@ -44,4 +44,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Categories;

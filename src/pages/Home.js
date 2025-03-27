@@ -1,32 +1,10 @@
-// import React from "react";
-// import Header from "../components/Header";
-// import Landing from "../components/Landing";
-// import Footer from "../components/Footer";
-// import ProductCard from "../components/ProductCard";
-// import AboutUs from "../components/AboutUs";
-
-
-
-// const Home = () => {
-//     return (
-//         <>
-//             <Header />
-//             <Landing />
-//             <ProductCard />
-//             <AboutUs />
-//             <Footer/>
-//         </>
-//     );
-// };
-
-// export default Home;
 
 
 import React, { useRef } from "react";
 import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
-import ProductCard from "../components/ProductCard";
+import ProductCard2 from "../components/ProductCard2";
 import AboutUs from "../components/AboutUs";
 
 const Home = () => {
@@ -42,7 +20,7 @@ const Home = () => {
         <>
             <Header scrollToAboutUs={scrollToAboutUs} />
             <Landing />
-            <ProductCard />
+            <ProductCard2 />
             {/* Pass the ref to AboutUs */}
             <AboutUs ref={aboutUsRef} />
             <Footer />

@@ -19,7 +19,7 @@ const bottomProducts = [
   { id: 3, name: "DUCHEN", price: "$950", image: HomePic7 },
 ];
 
-const ProductCard = () => {
+const ProductCard2 = () => {
   const navigate = useNavigate();
   return (
     <div className="text-center py-10 px-5 max-w-6xl mx-auto">
@@ -37,7 +37,7 @@ const ProductCard = () => {
         ))}
       </div>
 
-      <button onClick={() => navigate("/category/for-him")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
+      <button onClick={() => navigate("/categories/for-him")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
         View More
       </button>
 
@@ -53,11 +53,11 @@ const ProductCard = () => {
         ))}
       </div>
 
-      <button onClick={() => navigate("/category/for-her")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
+      <button onClick={() => navigate("/categories/for-her")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
         View More
       </button>
     </div>
   );
 };
 
-export default ProductCard;
+export default ProductCard2;
