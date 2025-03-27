@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @tailwind base;
 @tailwind components;
@@ -70,3 +71,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+>>>>>>> f7a2ac36d89ecea546bf85a2787442f73a43f2f7
