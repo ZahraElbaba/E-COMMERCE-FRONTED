@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 const Users = () => {
+  console.log("object")
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
