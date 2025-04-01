@@ -14,7 +14,7 @@ const UsersD = () => {
     phone: "",
     role: "USER",
   });
-  
+  console.log("hello");
   // Fetch all users
   const fetchUsers = async () => {
     setLoading(true);
