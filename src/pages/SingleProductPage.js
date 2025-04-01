@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useCart } from "../context/CartContext"; // Import useCart hook
 
 const SingleProductPage = () => {
   const { id } = useParams(); // Get the product ID from the URL
   const [product, setProduct] = useState(null);
+  const { addToCart } = useCart(); // Get addToCart function from CartContext
+  const [added, setAdded] = useState(false); // State to show confirmation message
 
   useEffect(() => {
     // Fetch the product details using the ID
@@ -27,6 +30,21 @@ const SingleProductPage = () => {
 
   const category = categoryNames[product.category_id] || "Uncategorized"; // Default to "Uncategorized" if not found
 
+  // Handle Add to Cart
+  const handleAddToCart = () => {
+    addToCart({ 
+      id: product.id, 
+      name: product.name, 
+      price: product.price, 
+      image: product.image_url, 
+      quantity: 1 // Default quantity
+    });
+    setAdded(true);
+
+    // Remove confirmation message after 2 seconds
+    setTimeout(() => setAdded(false), 2000);
+  };
+
   return (
     <div className="max-w-6xl mx-auto p-6">
       {/* Product Layout */}
@@ -36,7 +54,7 @@ const SingleProductPage = () => {
           <img
             src={product.image_url}
             alt={product.name}
-            className="w-64 h-64 object-contain mx-auto" // Slightly larger image
+            className="w-64 h-64 object-contain mx-auto"
           />
         </div>
 
@@ -56,7 +74,10 @@ const SingleProductPage = () => {
           {/* Buttons */}
           <div className="mt-6 flex flex-col space-y-4">
             {/* Add to Cart Button */}
-            <button className="bg-black text-white px-8 py-3 rounded flex items-center justify-center">
+            <button 
+              onClick={handleAddToCart} 
+              className="bg-black text-white px-8 py-3 rounded flex items-center justify-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6 mr-2"
@@ -74,10 +95,12 @@ const SingleProductPage = () => {
               Add to Cart
             </button>
 
-            {/* Buy Now Button */}
-            <button className="border border-black text-black px-8 py-3 rounded flex items-center justify-center">
-              Buy Now
-            </button>
+            {/* Show confirmation message */}
+            {added && (
+              <p className="text-green-600 text-lg font-semibold">
+                Product added to cart!
+              </p>
+            )}
           </div>
         </div>
       </div>
