@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "axios": "^1.8.4",
     "dotenv": "^16.4.7",
     "react": "^18.3.1",
