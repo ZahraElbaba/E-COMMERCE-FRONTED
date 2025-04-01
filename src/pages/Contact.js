@@ -101,8 +101,6 @@
 import React, { useState } from 'react';
 import ContactPic from '../assets/images/ContactPic.svg';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import axios from 'axios';  // Import Axios
 
 const Contact = () => {
@@ -141,7 +139,6 @@ const Contact = () => {
 
   return (
     <>
-      <Header />
       <section className="flex flex-wrap justify-center items-start gap-10 px-10 py-16 bg-white">
         {/* Left Side - Contact Form */}
         <div className="w-full md:w-1/2">
@@ -209,7 +206,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
