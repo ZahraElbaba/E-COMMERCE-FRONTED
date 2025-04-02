@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import CategoryPage from "./pages/CategoryPage";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer"; // Ensure Footer is included
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import ProductsPage from "./pages/Productspage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import SingleProductPage from "./pages/SingleProductPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+//import checkout from "./components/checkout"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+       <Routes>
+       <Route path="/" element={<Home/>}/>
+       </Routes>
+      <Header /> 
+      <Routes>
+        <Route path="/category/:categoryId" element={<CategoryPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<ProductsPage/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/product/:id" element={<SingleProductPage/>} />
+        <Route path="/cart" element={<CartPage/>} />
+        <Route path="/checkout" element={<CheckoutPage/>} />
+        <Route path="/category/:id" element={<Register/>} />
+
+
+
+
+        {/* Catch-all route should be last */}
+      </Routes>
+      <Footer /> 
+    </Router>
   );
 }
 
