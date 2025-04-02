@@ -13,7 +13,7 @@ const CategoryPage = () => {
         if (cachedData) {
             setProducts(JSON.parse(cachedData));
         } else {
-            fetch(`http://localhost:4000/api/products/category/${categoryId}`)
+            fetch(`http://localhost:3000/api/products/category/${categoryId}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setProducts(data.data);

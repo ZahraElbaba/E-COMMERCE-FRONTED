@@ -30,7 +30,7 @@ const CheckoutPage = () => {
 
     try {
       // 1️⃣ Create Order
-      const orderResponse = await fetch("http://localhost:4000/api/orders/", {
+      const orderResponse = await fetch("http://localhost:3000/api/orders/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId, total_amount: totalPrice.toFixed(2), status: "IN_PROGRESS" }),
@@ -49,7 +49,7 @@ const CheckoutPage = () => {
         };
         console.log("📦 Sending Order Item Data:", itemData);
 
-        const itemsResponse = await fetch("http://localhost:4000/api/orderItems/", {
+        const itemsResponse = await fetch("http://localhost:3000/api/orderItems/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(itemData),
@@ -58,7 +58,7 @@ const CheckoutPage = () => {
       }
 
       // 3️⃣ Create Shipping Address
-      const addressResponse = await fetch("http://localhost:4000/api/shipping-address/", {
+      const addressResponse = await fetch("http://localhost:3000/api/shipping-address/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...shippingAddress, user_id: userId }),
@@ -69,7 +69,7 @@ const CheckoutPage = () => {
       const shippingAddressId = addressData.data.id; // ✅ Matches backend response
 
       // 4️⃣ Create Shipping Record
-      const shippingResponse = await fetch("http://localhost:4000/api/shipping/", {
+      const shippingResponse = await fetch("http://localhost:3000/api/shipping/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

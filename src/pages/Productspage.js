@@ -10,7 +10,7 @@ const ProductsPage = () => {
 
   // Fetch products
   useEffect(() => {
-    fetch("http://localhost:4000/api/products/products")
+    fetch("http://localhost:3000/api/products/products")
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {

@@ -12,7 +12,7 @@ const Wishlist = () => {
     try {
       // const token =
       //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJTYW1pQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQyOTUyNDI3LCJleHAiOjE3NDM1NTcyMjd9.dAXhrlOXxZkFOXXQn7FNRqMG20hm4Fo0kn8PO59lN_s";
-      // localStorage.setItem("token", token);
+        const token =localStorage.setItem("token", token);
       if (!token) {
         throw new Error("No token found. Please log in first.");
       }

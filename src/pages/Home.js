@@ -18,12 +18,12 @@ const Home = () => {
 
     return (
         <>
-            <Header scrollToAboutUs={scrollToAboutUs} />
+       
             <Landing />
             <ProductCard2 />
             {/* Pass the ref to AboutUs */}
             <AboutUs ref={aboutUsRef} />
-            <Footer />
+            
         </>
     );
 };
