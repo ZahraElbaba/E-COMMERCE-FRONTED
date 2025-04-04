@@ -37,7 +37,7 @@ const ProductCard2 = () => {
         ))}
       </div>
 
-      <button onClick={() => navigate("/categories/for-him")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
+      <button onClick={() => navigate("/category/1")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
         View More
       </button>
 
@@ -53,7 +53,7 @@ const ProductCard2 = () => {
         ))}
       </div>
 
-      <button onClick={() => navigate("/categories/for-her")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
+      <button onClick={() => navigate("/category/2")} className="mt-6 bg-black text-white px-6 py-3 text-lg rounded-md transition-transform transform hover:scale-105">
         View More
       </button>
     </div>

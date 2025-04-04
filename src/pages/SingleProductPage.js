@@ -10,7 +10,7 @@ const SingleProductPage = () => {
 
   useEffect(() => {
     // Fetch the product details using the ID
-    fetch(`http://localhost:4000/api/products/products/${id}`)
+    fetch(`http://localhost:3000/api/products/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
